@@ -1,0 +1,165 @@
+{
+    "env": {
+        "browser": true,
+        "node": true,
+        "es6": true,
+        "jest": true,
+        "jquery": true
+    },
+    "parser": "babel-eslint",
+    "parserOptions": {
+        "ecmaVersion": 8,
+        "sourceType": "module",
+        "ecmaFeatures": {
+            "arrowFunctions": true,
+            "binaryLiterals": true,
+            "blockBindings": true,
+            "classes": true,
+            "defaultParams": true,
+            "destructuring": true,
+            "forOf": true,
+            "generators": true,
+            "modules": true,
+            "objectLiteralComputedProperties": true,
+            "objectLiteralDuplicateProperties": true,
+            "objectLiteralShorthandMethods": true,
+            "objectLiteralShorthandProperties": true,
+            "octalLiterals": true,
+            "regexUFlag": true,
+            "regexYFlag": true,
+            "spread": true,
+            "superInFunctions": true,
+            "templateStrings": true,
+            "unicodeCodePointEscapes": true,
+            "globalReturn": true,
+            "jsx": true,
+            "experimentalObjectRestSpread": true
+        }
+    },
+    "plugins": [
+        "react"
+    ],
+    "rules": {
+        "strict": 0,
+        //条件语句的条件中不允许出现赋值运算符
+        "no-cond-assign": 2,
+        //不允许出现debugger语句
+        "no-debugger": 2,
+        //函数定义的时候不允许出现重复的参数
+        "no-dupe-args": 2,
+        //对象中不允许出现重复的键
+        "no-dupe-keys": 2,
+        //switch语句中不允许出现重复的case标签
+        "no-duplicate-case": 2,
+        //不允许出现空的代码块
+        "no-empty": 2,
+        //在try catch语句中不允许重新分配异常变量
+        "no-ex-assign": 2,
+        //不允许出现不必要的布尔值转换
+        // "no-extra-boolean-cast": 2,
+        //不允许出现不必要的圆括号
+        "no-extra-parens": 0,
+        //不允许出现不必要的分号
+        "no-extra-semi": 2,
+        //不允许重新分配函数声明
+        "no-func-assign": 2,
+        //不允许在RegExp构造函数里出现无效的正则表达式
+        "no-invalid-regexp": 2,
+        //不允许出现不规则的空格
+        "no-irregular-whitespace": 2,
+        //在return，throw，continue，break语句后不允许出现不可能到达的语句
+        "no-unreachable": 2,
+        //要求检查NaN的时候使用isNaN()
+        "use-isnan": 2,
+        //在使用typeof表达式比较的时候强制使用有效的字符串
+        "valid-typeof": [
+            "error",
+            {
+                "requireStringLiterals": true
+            }
+        ],
+        //在switch语句中需要有default语句
+        "default-case": 0,
+        //限制条件语句的复杂度
+        "complexity": 0,
+        //比较的时候使用严格等于
+        "eqeqeq": [
+            "error",
+            "smart"
+        ],
+        //不允许使用arguments.callee和arguments.caller属性
+        "no-caller": 2,
+        //监视for in循环，防止出现不可预料的情况
+        "guard-for-in": 0,
+        //如果if语句有return，else里的return不用放在else里
+        "no-else-return": 0,
+        //不允许使用eval()
+        "no-eval": 2,
+        //不允许使用隐式eval()
+        "no-implied-eval": 2,
+        //不允许变量重复声明
+        "no-redeclare": 2,
+        //不允许在return语句中使用分配语句
+        "no-return-assign": 2,
+        //不允许使用with语句
+        "no-with": 2,
+        //使用parseInt时强制使用基数来指定是十进制还是其他进制
+        "radix": 1,
+        //不允许标签和变量同名
+        "no-label-var": 2,
+        //外部作用域中的变量不能与它所包含的作用域中的变量或参数同名
+        "no-shadow": 2,
+        //js关键字和保留字不能作为函数名或者变量名
+        "no-shadow-restricted-names": 2,
+        //不允许未声明的变量
+        "no-undef": 2,
+        //不允许有声明后未使用的变量或者参数
+        "no-unused-vars": [
+            2,
+            {
+                "vars": "all",
+                "args": "after-used"
+            }
+        ],
+        //函数表达式必须有名字
+        "func-names": 0,
+        //构造函数名字首字母要大写
+        "new-cap": [
+            2,
+            {
+                "newIsCap": true,
+                "capIsNew": false
+            }
+        ],
+        //new时构造函数必须有小括号
+        "new-parens": 2,
+        //变量声明后必须空一行
+        "newline-after-var": 0,
+        //空行最多不能超过两行
+        "no-multiple-empty-lines": [
+            2,
+            {
+                "max": 2
+            }
+        ],
+        //使用let和const代替var
+        "no-var": 0,
+        //生成器函数前后空格
+        "generator-star-spacing": [
+            2,
+            "both"
+        ],
+        "linebreak-style": [
+            "error",
+            "windows"
+        ],
+        // "quotes": [
+        //     "error",
+        //     "single"
+        // ],
+        "semi": [
+            "error",
+            "always"
+        ]
+    }
+}

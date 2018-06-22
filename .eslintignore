@@ -1,0 +1,4 @@
+.eslintrc.js
+package.js
+node_modules/**
+lib/uuid/**

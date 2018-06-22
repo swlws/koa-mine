@@ -1,0 +1,19 @@
+{
+    "port": 3000,
+    "https_port": 9909,
+    "pidFilePath": "/home/node.pid",
+    "get": [
+        {
+            "url": "/getUsers",
+            "file": "./interface/userinfo.js",
+            "func": "getUsers"
+        }
+    ],
+    "post": [
+        {
+            "url": "/getUser",
+            "file": "./interface/userinfo.js",
+            "func": "getUser"
+        }
+    ]
+}

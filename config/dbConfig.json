@@ -1,0 +1,14 @@
+{
+    "authMechanism": "SCRAM-SHA-1", //用户认证机制
+    "forceServerObjectId": true, // 指定_id由服务端产生
+    "loggerLevel": "warn", // mongodb日志级别
+    "port": "27017",
+    "host": "127.0.0.1",
+    "database": "mine",
+    "user": "mine",
+    "password": "123mine!!!",
+    "needAuth": true,
+    "journal": true,
+    "poolSize": 50,
+    "maxTimeMS": 30000 //(30 * 1000) 超时30秒 (使用错误日志中的时间戳来确定是哪个操作)
+}
