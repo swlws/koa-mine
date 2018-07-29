@@ -21,7 +21,7 @@ const getMethod = sreversConfig.get;
 const postMethod = sreversConfig.post;
 
 // url转码，一定程度上防止MongoDB注入攻击，XSS攻击
-app.use(require(__dirname + '/lib/urlEscapeLib').urlEscape);
+// app.use(require(__dirname + '/lib/urlEscapeLib').urlEscape);
 
 app.use(staticServer(__dirname + '/static'));
 
