@@ -5,6 +5,7 @@ const Koa = require('koa');
 const staticServer = require('koa-static');
 const KoaRouter = require('koa-router');
 const bodyParser = require('koa-bodyparser');
+const fs = require('fs');
 
 // load self code
 const logger = require('./lib/logLib.js').GetLogger();
@@ -24,6 +25,20 @@ const postMethod = sreversConfig.post;
 // app.use(require(__dirname + '/lib/urlEscapeLib').urlEscape);
 
 app.use(staticServer(__dirname + '/static'));
+
+app.use(async (ctx, next) => {
+    console.log(ctx.request);
+    let method = ctx.request.method;
+    let url = ctx.request.url
+    if ('POST' === method && url.indexOf('.html') > 0) {
+        ctx.res.statusCode = 200;
+        var data = fs.readFileSync('./static' + url);
+        ctx.res.write(data.toString());
+        ctx.res.end();
+    } else {
+        await next();
+    }
+});
 
 /**
  * 访问日志
